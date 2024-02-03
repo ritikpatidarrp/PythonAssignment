@@ -12,7 +12,10 @@ class Solution:
             if vis[i][j]==True:
                 return True
             vis[i][j] = True
-            ans = checkIfSurroundedByX(i-1,j,board,vis) and checkIfSurroundedByX(i+1,j,board,vis) and checkIfSurroundedByX(i,j-1,board,vis) and checkIfSurroundedByX(i,j+1,board,vis)
+            ans = checkIfSurroundedByX(i-1,j,board,vis) 
+            ans = ans and checkIfSurroundedByX(i+1,j,board,vis) 
+            ans = ans and checkIfSurroundedByX(i,j-1,board,vis) 
+            ans = ans and checkIfSurroundedByX(i,j+1,board,vis)
             return ans
         
         def markXtheComponent(i,j,board):
